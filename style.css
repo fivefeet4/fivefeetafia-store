@@ -1,0 +1,438 @@
+/* General styling */
+html, body {
+  height: 100%;
+
+
+}
+
+/* For Webkit-based browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(34, 34, 85, 0.7);
+  border-radius: 5px;
+  opacity: 0.35;
+}
+
+/* For Firefox */
+::-moz-scrollbar {
+  width: 10px;
+}
+
+::-moz-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: rgba(34, 34, 85, 0.7);
+  border-radius: 5px;
+  opacity: 0.35;
+}
+
+/* Set the container to a flex container with a column direction */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family:'raleway';
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+ 
+  margin: 0;
+  padding: 0;
+} */
+
+main {
+  flex: 1 0 auto;
+}
+
+
+
+/* Header styling */
+header {
+  background-color: #225;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  margin: 0;
+  font-size: 36px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f0f0f0;
+}
+.empty{
+  width: 100%;
+  height: 15%;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #225;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.btn-2 {
+  display: inline-block;
+  padding: 15px 30px;
+  color: rgb(45, 45, 96);
+  border-radius: 10px;
+  color: #225;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+
+.btn:hover {
+  background-color: #555;
+}
+
+.hero-image {
+  flex: 1;
+  margin-left: 50px;
+  animation: float 0.8s ease-in-out; /* Adding animation property */
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: 500px;
+}
+
+
+
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+#myVideo{
+  width: 500px;
+  height: 310px;
+}
+/* Main content styling */
+main {
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.product-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-item img {
+  width: 450px;
+  height: 300px;
+
+    
+}
+/* .product-item img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+} */
+#modal-image {
+width: 250px;
+height: 350px;
+object-fit: cover;
+object-position: center;
+}
+
+.product-item h3 {
+  margin: 10px 0;
+}
+
+.product-item p {
+  margin: 0;
+}
+
+/* Footer styling */
+footer {
+  background-color: #225;
+  flex-shrink: 0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.product-item:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  max-width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1{
+  color: #225;
+  font-size: large;
+}
+
+
+.about-txt{
+  display: flex;
+  width: 40%;
+}
+.about{
+  margin: 20px;
+  background-color: #f8f3f3;
+  padding: 20px;
+}
+
+.contact-txt{
+  /* display: flex; */
+  width: 40%;
+}
+.contact{
+  margin: 20px;
+  background-color: #f8f3f3;
+  padding: 20px;
+}
+
+
+
+
+.cart {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.item-details {
+  flex: 1 1 0%;
+}
+
+.item-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.item-details p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.item-details input[type="number"] {
+  width: 50px;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+.cart-total {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.cart-total h3 {
+  font-size: 24px;
+}
+
+.checkout-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #0069d9;
+}
+
+.cart-total {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.cart-total h3 {
+  font-size: 24px;
+}
+
+.checkout-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.checkout-btn:hover {
+  background-color: #0069d9;
+}
